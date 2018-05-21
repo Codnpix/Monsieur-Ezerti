@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>MONSIEUR EZERTI</title>
+    <meta name ="author" content="Pierre Jarriges">
+    <meta name="description" content="interactive online marabou">
+  </head>
+  <body>
+    
+    <div style="text-align:center"><img src="maraboutweb.bmp";
+    alt="dessin_marabout"
+    onmouseover="this.src='maraboutwebwink.bmp'"; onmouseout="this.src='maraboutweb.bmp'";
+    style="width:300px; height:386px" ;></div>
+   
+    
+    <h1 style="text-align:center; font-size:35px">MONSIEUR EZERTI</h1>
+    
+    <h4 style="text-align:center; font-size:22px">*GRAND VOYANT MEDIUM*</h4>
+   
+    <p  style="text-align:center; font-size:90%; padding:5px; margin: 15px; border:3px solid #4a4aff; background-color:#afafff; color:black"> Grand voyant medium de renommée mondiale 
+      de par ses nombreux prodiges
+      accomplis à travers l'univers tout entier.<br/>
+      Chance en amour immédiate, retour de l'être aimé sous 4 jours par colissimo - Guérison de toutes les maladies, Désenvoûtement de l'ordinateur - Invincibilité aux 
+      jeux vidéos - Résolution de tous vos problèmes sexuels, vous connaîtrez l'extase chaque jour. Réussite aux examens, 20/20 partout - 
+      Travail, augmentations et 
+      promotions, avenir assuré, votre patron sera amoureux de vous pour toujours -
+      Résout tous les problèmes d'argent, plus jamais de soucis, plus jamais d'argent. 
+<br/><br/>
+  <b>Résultats spéctaculaires 100% garantis sous une semaine</b>.<br/>
+        Sérieux et discret.
+    </p>
+  
+    <p>Joue au dé pour sélectionner un des services de Monsieur Ezerti.</p>
+  
+    <button id= "btn" onclick = "play(); disable()">Lancer le dé</button>
+   
+    <p id="score"></p>
+    
+    <br/>
+  <div id="themes"> 
+    <dl> 
+   
+      <dt > <img id="gifcoeur" src="coeur.gif" alt="coeur" style = "float:left;width:30px;height:26px;padding:3px;" /> 1.Amour </dt>
+      <dd><i>Rencontre de l'âme sœur, retour de l'être aimé, bien-être du couple.<br/> Passion et confiance pour toujours.</i></dd><br/>
+      <dt><img id="gifpharma" src="pharma.gif" alt="croix pharmacie" style="float:left; width:30px;height:30px;padding:3px;" />2.Santé</dt>
+      <dd><i>Guérison des maladies, force surhumaine, immunisation à vie.</i></dd><br/>
+      <dt><img id="giftechno" src="techno.gif" alt="Description de l’image" style ="float:left;padding:3px;width:40px;height:40px;" />3.Technologie</dt>
+      <dd><i>Désenvoûtement de l'ordinateur, téléphone portable, playstation, carte sim. <br/>Vision extralucide à travers les circuits. </i></dd><br/>
+      <dt><img id = "gifsex" src="seX.gif" alt="Description de l’image" style="float:left;width:30px;height:30px;padding:3px;"/>4.Sexe</dt>
+      <dd><i>Impuissance, frigidité et complexes seront les problèmes du passé. <br/>Vous connaîtrez une aisance parfaite et l'extase systématique. </i></dd><br/>
+      <dt><img id="gifwork" src="work.gif" alt="Description de l’image" style="float:left;width:45px;height:45px;padding:3px;" />5.Travail</dt>
+      <dd><i>Réussite dans le travail, augmentations, promotions, reconnaissance, <br/>votre patron vos collègues et/ou vos clients vont vous adorer - <br/>20/20 à tous les examens, diplôme en poche sans le moindre effort.</i></dd><br/>
+      <dt><img id="gifmoney" src="cash.gif" alt="Description de l’image" style="float:left;width:30px;height:30px;padding:3px;" />6.Argent</dt>
+      <dd><i>Graĉe à une technique très elaborée d'ensorcellement de votre compte <br/>en banque vous n'aurez plus jamais à vous soucier de votre argent.</i></dd>
+    </dl>
+    </div> 
+    <br/>
+    <p> Maintenant que le sort a été choisi, relance ton dé et ton score déterminera son efficacité ! </p>
+    
+    <button id= "btn2" onclick = "play2(); disable2()">Lancer le dé</button>
+
+    <p id="score2"></p>
+    
+    <script>
+      function play() {
+        var x = document.createElement("IMG");
+        var roll = roll();
+        function roll(){
+       return Math.floor(Math.random()*6)+1;
+        }
+        
+        if (roll === 1) {
+          x.setAttribute("src","dice1.bmp"); document.getElementById("gifcoeur").style = "width:100px;height:100px;"
+        }
+        else if (roll === 2) {
+          x.setAttribute("src","dice2.bmp"); document.getElementById("gifpharma").style = "width:100px;height:100px;"
+        }
+        else if (roll === 3) {
+          x.setAttribute("src","dice3.bmp");
+          document.getElementById("giftechno").style = "width:100px;height:100px;"
+        }
+        else if (roll === 4) {
+          x.setAttribute("src","dice4.bmp");
+          document.getElementById("gifsex").style = "width:100px;height:100px;"
+        }
+        else if (roll === 5) {
+          x.setAttribute("src","dice5.bmp");
+          document.getElementById("gifwork").style = "width:100px;height:100px;"
+        }
+        else if (roll === 6) {
+          x.setAttribute("src","dice6.bmp");
+          document.getElementById("gifmoney").style = "width:100px;height:100px;"
+        }
+        
+        document.getElementById('score').appendChild(x);
+      }
+   
+      function disable() { document.getElementById('btn').disabled=true;
+                         }
+ 
+      
+      function play2() {
+        var y = document.createElement("IMG");
+        var roll2 = roll();
+        function roll(){
+          return Math.floor(Math.random()*6)+1;
+        }
+
+        if (roll2 === 1) {
+          y.setAttribute("src","dice1.bmp"); 
+        }
+        else if (roll2 === 2) {
+          y.setAttribute("src","dice2.bmp");
+        }
+        else if (roll2 === 3) {
+          y.setAttribute("src","dice3.bmp");
+        }
+        else if (roll2 === 4) {
+          y.setAttribute("src","dice4.bmp");
+        }
+        else if (roll2 === 5) {
+          y.setAttribute("src","dice5.bmp");
+        }
+        else if (roll2 === 6) {
+          y.setAttribute("src","dice6.bmp");
+        }
+       
+        document.getElementById('score2').appendChild(y);
+      }
+
+      function disable2() { document.getElementById('btn2').disabled=true;
+                         }
+    </script>
+  </body>
+</html>
