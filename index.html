@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>MONSIEUR EZERTI</title>
+    <meta name ="author" content="Pierre Jarriges">
+    <meta name ="keywords" content="Prism 13, prism 13, fanzine, minijeu, marabout, webgame">
+    <meta name="description" content="interactive online marabou">
+    <script language="javascript" type="text/javascript" src="ezertiplayscript.js"> </script>
+  </head>
+  <body>
+    <div style="text-align:center"><img src="maraboutweb.bmp";
+    alt="dessin_marabout"
+    onmouseover="this.src='maraboutwebwink.bmp'"; onmouseout="this.src='maraboutweb.bmp'";
+    style="width:300px; height:386px" ;></div>
+   
+    <h1 style="text-align:center; font-size:35px">MONSIEUR EZERTI</h1>
+    
+    <h4 style="text-align:center; font-size:22px">*GRAND VOYANT MEDIUM*</h4>
+   
+    <p  style="text-align:center; font-size:90%; padding:5px; margin: 15px; border:3px solid #4a4aff; background-color:#afafff; color:black"> Grand voyant medium de renommée mondiale 
+      de par ses nombreux prodiges
+      accomplis à travers l'univers tout entier.<br/>
+      Chance en amour immédiate, retour de l'être aimé sous 4 jours par colissimo - Guérison de toutes les maladies, Désenvoûtement de l'ordinateur - Invincibilité aux 
+      jeux vidéos - Résolution de tous vos problèmes sexuels, vous connaîtrez l'extase chaque jour. Réussite aux examens, 20/20 partout - 
+      Travail, augmentations et 
+      promotions, avenir assuré, votre patron sera amoureux de vous pour toujours -
+      Résout tous les problèmes d'argent, plus jamais de soucis, plus jamais d'argent. 
+<br/><br/>
+  <b>Résultats spéctaculaires 100% garantis sous une semaine</b>.<br/>
+        Sérieux et discret.
+    </p>
+  
+    <p>Joue au dé pour sélectionner un des services de Monsieur Ezerti.</p>
+  
+    <button id= "btn" onclick = "play1(); disable()">Lancer le dé</button>
+   
+    <p id="score"></p>
+    
+    <br/>
+  <div id="themes"> 
+    <dl> 
+   
+      <dt id="amourtitle"> <img id="gifcoeur" src="coeur.gif" alt="coeur" style = "float:left;width:30px;height:26px;padding:3px;" /> 1.Amour </dt>
+      <dd id="amourserv"><i>Rencontre de l'âme sœur, retour de l'être aimé, bien-être du couple.<br/> Passion et confiance pour toujours.</i></dd>
+      <br/>
+      <dt id="santetitle"><img id="gifpharma" src="pharma.gif" alt="croix pharmacie" style="float:left; width:30px;height:30px;padding:3px;" />2.Santé</dt>
+      <dd id="santeserv"><i>Guérison des maladies, force surhumaine, immunisation à vie.</i></dd>
+      <br/>
+      <dt id="technotitle"><img id="giftechno" src="techno.gif" alt="Description de l’image" style ="float:left;padding:3px;width:40px;height:40px;" />3.Technologie</dt>
+      <dd id="technoserv"><i>Désenvoûtement de l'ordinateur, téléphone portable, playstation, carte sim. <br/>Vision extralucide à travers les circuits. </i></dd>
+      <br/>
+      <dt id="sextitle"><img id = "gifsex" src="seX.gif" alt="Description de l’image" style="float:left;width:30px;height:30px;padding:3px;"/>4.Sexe</dt>
+      <dd id="sexserv"><i>Impuissance, frigidité et complexes seront les problèmes du passé. <br/>Vous connaîtrez une aisance parfaite et l'extase systématique. </i></dd>
+      <br/>
+      <dt id="worktitle"><img id="gifwork" src="work.gif" alt="Description de l’image" style="float:left;width:45px;height:45px;padding:3px;" />5.Travail</dt>
+      <dd id="workserv"><i>Réussite dans le travail, augmentations, promotions, reconnaissance, <br/>votre patron vos collègues et/ou vos clients vont vous adorer - <br/>20/20 à tous les examens, diplôme en poche sans le moindre effort.</i></dd>
+      <br/>
+      <dt id="moneytitle"><img id="gifmoney" src="cash.gif" alt="Description de l’image" style="float:left;width:30px;height:30px;padding:3px;" />6.Argent</dt>
+      <dd id="moneyserv"><i>Graĉe à une technique très elaborée d'ensorcellement de votre compte <br/>en banque vous n'aurez plus jamais à vous soucier de votre argent.</i></dd>
+    </dl>
+    </div> 
+    <br/>
+    <p> Maintenant que le sort a été choisi, relance ton dé et ton score déterminera son efficacité ! </p>
+    
+    <button id= "btn2" onclick = "play2(); disable2()">Lancer le dé</button>
+
+    <p id="score2"></p>
+    <div id="audio">
+    <audio id="soundtrack" loop controls autoplay> <source src="ezertitrack.mp3" type="audio/mpeg"></audio>
+    </div>
+    
+  </body>
+</html>
