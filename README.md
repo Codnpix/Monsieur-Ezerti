@@ -1,2 +1,2 @@
 # Monsieur-Ezerti
-Online marabou fun game
+Online marabou
